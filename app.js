@@ -6,11 +6,10 @@ const addButton = function(e){
   e.preventDefault(); //prevent reload
   count++; //increment count by 1
   const button = `<button class='new'>${count}</button>`; //make a string that represents the new button
-  //const button = `<button id="${count}">${count}</button>`;
   render(button); //render the new button to the page
   console.log($(this))
   render($(this).text()); // render the text from the more button to the page
-  //$(`#${count}`).on('click', printNum);
+  
 }
 
 /* render the text of the element clicked to the page.
@@ -36,3 +35,6 @@ $('#more').on('click', addButton);
  Should render the new button's number to the page when clicked */
 //$('.new').on('click', printNum);
 $(document).on('click', '.new', printNum);
+//$(staticAncestors).on(eventName, dynamicChild, function() {});
+
+
